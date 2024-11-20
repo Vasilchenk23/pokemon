@@ -65,10 +65,18 @@ h1 {
   font-family: Roboto;
 }
 
-@media (max-width:8000px) {
+@media (min-width: 800px) {
   .block {
     display: grid;
     place-items: center;
     height: 50vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
   }
 }
