@@ -9,7 +9,7 @@ export const Main = () => {
   useEffect(() => {
     const fetchPokemons = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/pokemon/random");
+        const response = await fetch("http:pokemon-back-production-8a73.up.railway.app/api/pokemon/random");
         const data = await response.json();
         setPokemons(data);
       } catch (error) {
