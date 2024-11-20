@@ -24,7 +24,7 @@ export const Main = () => {
 
   const voteForPokemon = async (pokemonId, pokemonName) => {
     try {
-      await fetch("http://localhost:3001/vote", {
+      await fetch("https://pokemon-back-production-8a73.up.railway.app/api/pokemon/vote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ pokemonId, pokemonName }),
