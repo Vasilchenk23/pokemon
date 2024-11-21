@@ -69,7 +69,7 @@ h1 {
   .block {
     display: grid;
     place-items: center;
-    height: 90vh;
+    height: 70vh;
   }
 }
 
