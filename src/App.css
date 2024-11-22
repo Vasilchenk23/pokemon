@@ -3,6 +3,16 @@
   src: url('../public/font/Roboto/Roboto-Black.ttf');
 }
 
+a {
+  text-decoration: none; 
+  color: inherit;       
+}
+
+a:hover {
+  text-decoration: none; 
+  color: inherit;   
+}
+
 
 body {
   margin: 0;
