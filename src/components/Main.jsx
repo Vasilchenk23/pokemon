@@ -22,14 +22,14 @@ export const Main = () => {
     fetchPokemons();
   }, []);
 
-  const voteForPokemon = async (pokemonId, pokemonName) => {
+  const voteForPokemon = async (pokemonId, pokemonName, imageUrl) => {
     try {
       const response = await fetch(
         "https://pokemon-back-production-8a73.up.railway.app/api/pokemon/vote",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ pokemonId, pokemonName }),
+          body: JSON.stringify({ pokemonId, pokemonName, imageUrl }),
         }
       );
   
@@ -46,6 +46,7 @@ export const Main = () => {
   };
   
   
+  
   if (!pokemons.pokemon1 || !pokemons.pokemon2) {
     return <p>Загрузка покемонов...</p>;
   }
@@ -57,7 +58,7 @@ export const Main = () => {
         <div className="first-pokemon">
           <img src={pokemons.pokemon1.image} alt={pokemons.pokemon1.name} />
           <button
-            onClick={() => voteForPokemon(pokemons.pokemon1.id, pokemons.pokemon1.name)}
+            onClick={() => voteForPokemon(pokemons.pokemon1.id, pokemons.pokemon1.name,  pokemons.pokemon1.image)}
           >
             Он лучше
           </button>
@@ -65,7 +66,7 @@ export const Main = () => {
         <div className="second-pokemon">
           <img src={pokemons.pokemon2.image} alt={pokemons.pokemon2.name} />
           <button
-            onClick={() => voteForPokemon(pokemons.pokemon2.id, pokemons.pokemon2.name)}
+            onClick={() => voteForPokemon(pokemons.pokemon2.id, pokemons.pokemon2.name,  pokemons.pokemon1.image)}
           >
             Он лучше
           </button>
