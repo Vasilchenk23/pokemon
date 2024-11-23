@@ -24,7 +24,6 @@ export const Result = () => {
       <ul className="pokemon-list">
         {topPokemons.map((pokemon, index) => (
           <li key={pokemon.id} className="pokemon-card">
-            <span className="pokemon-rank">{index + 1}</span>
             <img
               src={pokemon.image_url}
               alt={pokemon.pokemon_name}
