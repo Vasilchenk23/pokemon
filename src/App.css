@@ -90,3 +90,64 @@ h1 {
     margin-top: 100px;
   }
 }
+
+.result-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #d32f2f; 
+  margin-bottom: 20px;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pokemon-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-rank {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1976d2; 
+  text-align: center;
+  width: 100px;
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+
+.pokemon-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.pokemon-votes {
+  font-size: 0.9rem;
+  color: #555;
+}
+
